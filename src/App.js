@@ -11,13 +11,15 @@ import Schedule from "./components/Schedule/Schedule";
 function App() {
   return (
       <div className={styles.wrapper}>
-          <Header/>
-        <div className={styles.content}>
-            <AboutUs/>
-            <Rabbis/>
-            <Questions/>
-            <Schedule/>
-        </div>
+          <div className={styles.content}>
+              <Header/>
+              <div className={styles.main}>
+                  <AboutUs/>
+                  <Rabbis/>
+                  <Questions/>
+                  <Schedule/>
+              </div>
+          </div>
           <Footer/>
       </div>
   );

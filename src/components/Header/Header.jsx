@@ -3,6 +3,16 @@ import logo from '../../assets/synagogue-white-line-icon_116137-3672.svg'
 import styles from './Header.module.scss'
 
 function Header() {
+    const scrollTo = (name) => {
+        scroller.scrollTo(name, {
+            duration: 1500,
+            delay: 100,
+            smooth: true,
+            offset: -100
+            // containerId: 'ContainerElementID',
+        });
+    }
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.content}>
