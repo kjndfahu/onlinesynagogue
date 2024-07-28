@@ -1,9 +1,11 @@
 import React from 'react';
 import styles from './BurgerMenu.module.scss'
 import {scroller} from "react-scroll";
+import Modal from "../Modal/Modal";
 
 
 const BurgerMenu = ({isActive, setActive}) => {
+    const [activeModal, setActiveModal] = React.useState(false)
 
     React.useEffect(() =>{
         if (isActive) {
@@ -33,6 +35,7 @@ const BurgerMenu = ({isActive, setActive}) => {
                 <li className={styles.rabbis} onClick={() => scrollTo('rabbis')}>Раввины</li>
                 <li className={styles.questions} onClick={() => scrollTo('questions')}>Вопросы</li>
                 <li className={styles.schedule} onClick={() => scrollTo('schedule')}>Расписание</li>
+                <button className={styles.button} onClick={() => setActiveModal(true)}>Поддержать</button>
             </div>
             <div className={styles.infoblock}>
                 <div className={styles.secondblock}>
@@ -41,6 +44,8 @@ const BurgerMenu = ({isActive, setActive}) => {
                     <h4>+7-960-996-95-76</h4>
                 </div>
             </div>
+
+            <Modal active={activeModal} setActive={setActiveModal}/>
         </div>
     );
 };

@@ -7,7 +7,6 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 function Header({activeBurger, setActiveBurger}) {
     const [active, setActive] = React.useState(false)
-    const [activeModal, setActiveModal] = React.useState(false)
 
     const scrollTo = (name) => {
         scroller.scrollTo(name, {
@@ -32,7 +31,6 @@ function Header({activeBurger, setActiveBurger}) {
                     <li className={styles.schedule} onClick={() => scrollTo('schedule')}>Расписание</li>
                 </ul>
                 <button className={styles.button} onClick={() => setActive(true)}>Поддержать</button>
-
                 <div className={styles.burger}>
                     {activeBurger ?
                         <svg onClick={() => setActiveBurger(false)} width="35" height="35" viewBox="0 0 35 35"
@@ -47,6 +45,8 @@ function Header({activeBurger, setActiveBurger}) {
                         </svg>}
                 </div>
             </div>
+
+            <Modal active={active} setActive={setActive}/>
         </div>
     )
 }

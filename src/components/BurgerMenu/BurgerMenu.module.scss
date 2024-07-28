@@ -76,6 +76,24 @@
   text-align: left;
 }
 
+.button{
+  width: 120px;
+  background-color: transparent;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  color: black;
+  font-weight: 700;
+  height: 40px;
+  border-radius: 30px;
+  border: 1px solid black;
+  cursor: pointer;
+
+  &:hover{
+    color: #366fee;
+    border: 1px solid #366fee;
+  }
+}
+
 .infoblock{
   display: flex;
   align-items: center;
