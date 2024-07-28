@@ -1,0 +1,97 @@
+.wrapper{
+  display: flex;
+  padding: 15px;
+  border-bottom: 1px solid #E2E3EF;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #FFFFFF;
+}
+
+.content{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logowrapper{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+
+  &:hover{
+    cursor: pointer;
+    color: #366fee;
+  }
+}
+
+.logo{
+  width: 70px;
+  height: 70px;
+}
+
+.textlogo{
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  list-style: none;
+  font-size: 24px;
+  margin: 0;
+  align-self: center;
+}
+
+.list{
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  list-style: none;
+  font-size: 17px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+
+  li{
+    cursor: pointer;
+  }
+}
+
+.aboutus{
+  &:hover{
+    color: #366fee;
+  }
+}
+
+.rabbis{
+  &:hover{
+    color: #366fee;
+  }
+}
+
+.questions{
+  &:hover{
+    color: #366fee;
+  }
+}
+
+.schedule{
+  &:hover{
+    color: #366fee;
+  }
+}
+
+.button{
+  width: 120px;
+  background-color: transparent;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  color: black;
+  font-weight: 700;
+  height: 40px;
+  border-radius: 30px;
+  border: 1px solid black;
+  cursor: pointer;
+
+  &:hover{
+    color: #366fee;
+    border: 1px solid #366fee;
+  }
+}

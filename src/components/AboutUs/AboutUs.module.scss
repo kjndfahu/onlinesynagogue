@@ -1,0 +1,43 @@
+.wrapper{
+  display: flex;
+}
+
+.content{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.animbox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 610px;
+  height: 410px;
+  overflow: hidden;
+  border: 5px solid #366fee;
+  border-radius: 20px;
+}
+
+.synagogue{
+  border-radius: 20px;
+}
+
+.texts{
+  display: flex;
+  flex-wrap: wrap;
+  width:100%;
+  flex-direction: column;
+  max-width: 600px;
+}
+
+.headtext{
+  font-family: "Ubuntu", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.text{
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+}
