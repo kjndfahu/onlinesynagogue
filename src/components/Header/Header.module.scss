@@ -1,5 +1,5 @@
 .wrapper{
-  width: 100%;
+  width: 100vw;
   max-width: 1480px;
   display: flex;
   padding: 15px;
@@ -12,6 +12,7 @@
 
 .content{
   display: flex;
+  padding: 0 100px;
   width: 100%;
   justify-content: space-between;
   align-items: center;
@@ -117,6 +118,9 @@
 }
 
 @media(max-width: 450px){
+  .content{
+    padding: 0 15px;
+  }
 
   .textlogo{
     line-height: 30px;

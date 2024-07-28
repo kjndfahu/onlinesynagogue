@@ -3,10 +3,11 @@ import {scroller } from 'react-scroll';
 import logo from '../../assets/synagogue-white-line-icon_116137-3672.svg'
 import styles from './Header.module.scss'
 import Modal from "../Modal/Modal";
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 function Header({activeBurger, setActiveBurger}) {
     const [active, setActive] = React.useState(false)
-    console.log(activeBurger)
+    const [activeModal, setActiveModal] = React.useState(false)
 
     const scrollTo = (name) => {
         scroller.scrollTo(name, {
@@ -18,6 +19,7 @@ function Header({activeBurger, setActiveBurger}) {
     }
     return (
         <div className={styles.wrapper}>
+            <BurgerMenu isActive={activeBurger} setActive={setActiveBurger}/>
             <div className={styles.content}>
                 <div className={styles.logowrapper}>
                     <img className={styles.logo} src={logo} alt="logo"/>
