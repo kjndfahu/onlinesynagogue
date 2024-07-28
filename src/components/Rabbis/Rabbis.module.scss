@@ -18,10 +18,20 @@
   font-weight: 700;
 }
 
+.names{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  color: black;
+}
+
 .rabbisblock{
   display: flex;
   align-items: center;
-  gap: 100px;
+  flex-wrap: wrap;
+  gap: 120px;
 }
 
 .rabbis{
@@ -30,4 +40,28 @@
   align-items: center;
   font-family: "Inter", sans-serif;
   font-size: 18px;
+  gap: 10px;
+}
+
+
+@media(max-width: 1070px){
+  .content{
+    width: 80%;
+  }
+  .headtext{
+    text-align: center;
+    font-size: 35px;
+  }
+
+
+  .rabbisblock{
+    justify-content: space-between;
+    gap: 35px;
+  }
+}
+
+@media(max-width: 480px){
+  .rabbisblock{
+    display: block;
+  }
 }

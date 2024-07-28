@@ -18,10 +18,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 
-.text{
+.textpara{
+  display: flex;
   text-align: center;
 }
 
@@ -29,4 +32,18 @@
 .image{
   width: 7%;
   height:7%;
+}
+
+@media(max-width: 980px){
+  .maintext{
+    font-size: 35px;
+  }
+
+  .headtext{
+    font-size: 20px;
+  }
+
+  .textpara{
+    font-size: 14px;
+  }
 }

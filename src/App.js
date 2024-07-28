@@ -9,20 +9,22 @@ import Questions from "./components/Questions/Questions";
 import Schedule from "./components/Schedule/Schedule";
 
 function App() {
-  return (
-      <div className={styles.wrapper}>
-          <div className={styles.content}>
-              <Header/>
-              <div className={styles.main}>
-                  <AboutUs/>
-                  <Rabbis/>
-                  <Questions/>
-                  <Schedule/>
-              </div>
-          </div>
-          <Footer/>
-      </div>
-  );
+    const [activeBurger, setActiveBurger] = React.useState(false)
+
+    return (
+        <div className={styles.wrapper}>
+            <div className={styles.content}>
+                <Header activeBurger={activeBurger} setActiveBurger={setActiveBurger}/>
+                <div className={styles.main}>
+                    <AboutUs/>
+                    <Rabbis/>
+                    <Questions/>
+                    <Schedule/>
+                </div>
+            </div>
+            <Footer/>
+        </div>
+    );
 }
 
 export default App;

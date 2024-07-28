@@ -97,3 +97,29 @@
     border: 1px solid #366fee;
   }
 }
+
+.burger{
+  display: none;
+}
+
+@media(max-width: 1070px){
+  .list{
+    display: none;
+  }
+
+  .button{
+    display: none;
+  }
+
+  .burger{
+    display: flex;
+  }
+}
+
+@media(max-width: 450px){
+
+  .textlogo{
+    line-height: 30px;
+    text-align: center;
+  }
+}

@@ -15,11 +15,13 @@ function Footer() {
                 </div>
                 <div className={styles.block}>
                     <p className={styles.par}>Контакты</p>
-                    <h4>help@onlinesynagoga.ru</h4>
-                    <h4>+7-960-996-95-76</h4>
+                    <div className={styles.hfour}>
+                        <p className={styles.par}>help@onlinesynagoga.ru</p>
+                        <p className={styles.par}>+7-960-996-95-76</p>
+                    </div>
                 </div>
                 <div className={styles.block}>
-                    <p className={styles.par}>Пользовательское соглашение</p>
+                <p className={styles.par}>Пользовательское соглашение</p>
                     <p className={styles.par}>Политика оплаты и возврата</p>
                     <p className={styles.par}>Политика использования Cookie</p>
                 </div>

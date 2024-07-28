@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Rabbis.module.scss'
+import {Element} from "react-scroll";
 
 function Rabbis() {
     const rabbis = [
@@ -31,19 +32,21 @@ function Rabbis() {
     ]
 
     return (
-        <div className={styles.wrapper}>
-            <div className={styles.content}>
-                <h2 className={styles.headtext}>Наши Раввины</h2>
-                <div className={styles.rabbisblock}>
-                    {rabbis.map((rabbis, index) => (
-                        <div className={styles.rabbis}>
-                            <img src={rabbis.image} alt="image"/>
-                            <h4 className={styles.names}>{rabbis.name}</h4>
-                        </div>
-                    ))}
+        <Element name='rabbis'>
+            <div className={styles.wrapper}>
+                <div className={styles.content}>
+                    <h2 className={styles.headtext}>Наши Раввины</h2>
+                    <div className={styles.rabbisblock}>
+                        {rabbis.map((rabbis, index) => (
+                            <div className={styles.rabbis}>
+                                <img src={rabbis.image} alt="image"/>
+                                <h4 className={styles.names}>{rabbis.name}</h4>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
+        </Element>
     )
 }
 

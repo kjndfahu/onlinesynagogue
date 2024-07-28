@@ -2,6 +2,7 @@ import React from "react";
 import styles from './Schedule.module.scss'
 import menorah from '../../assets/9113186_menorah_solid_icon.svg'
 import davidstar from '../../assets/9113702_star_of_david_solid_icon.svg'
+import {Element} from "react-scroll";
 
 function Schedule() {
     const schedule = [
@@ -25,17 +26,19 @@ function Schedule() {
     console.log(schedule)
 
     return (
-        <div className={styles.wrapper}>
-            <h1 className={styles.maintext}>Расписание</h1>
-            {schedule.map((event) => (
-                <div className={styles.blocks}>
-                    <div className={styles.texts}>
-                        <h2 className={styles.headtext}>{event.name}</h2>
-                        <p className={styles.text}>{event.p}</p>
+        <Element name='schedule'>
+            <div className={styles.wrapper}>
+                <h1 className={styles.maintext}>Расписание</h1>
+                {schedule.map((event) => (
+                    <div className={styles.blocks}>
+                        <div className={styles.texts}>
+                            <h2 className={styles.headtext}>{event.name}</h2>
+                            <p className={styles.textpara}>{event.p}</p>
+                        </div>
                     </div>
-                </div>
-            ))}
-        </div>
+                ))}
+            </div>
+        </Element>
     )
 }
 

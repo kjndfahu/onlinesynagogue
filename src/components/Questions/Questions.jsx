@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Questions.module.scss'
 import Item from './Item/Item'
+import {Element} from "react-scroll";
 
 function Questions() {
     const data = [
@@ -22,6 +23,7 @@ function Questions() {
     ]
 
     return(
+        <Element name='questions'>
             <div className={styles.wrapper}>
                 <div className={styles.content}>
                     <h1>Вопросы</h1>
@@ -32,6 +34,8 @@ function Questions() {
                     </div>
                 </div>
             </div>
+        </Element>
+
     )
 }
 
